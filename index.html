@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#14110f">
+<title>德意志史诗 · DEUTSCHE GESCHICHTE</title>
+<meta name="description" content="一部可长期阅读与研究的德国历史数字图书馆。以《德国通史》六卷本为框架，融合《德意志道路》与《德国史1918-2014》。">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- 阅读进度条 -->
+<div id="global-progress" class="global-progress"></div>
+
+<!-- 顶部栏 -->
+<header class="topbar" id="topbar">
+  <button class="icon-btn menu-btn" id="menu-btn" aria-label="目录">
+    <span class="ic-menu"></span>
+  </button>
+  <a class="brand" href="#" data-nav="home">
+    <span class="brand-mark">DG</span>
+    <span class="brand-text">
+      <strong>德意志史诗</strong>
+      <small>DEUTSCHE GESCHICHTE</small>
+    </span>
+  </a>
+  <div class="top-actions">
+    <button class="icon-btn" id="search-btn" aria-label="搜索"><span class="ic-search"></span></button>
+    <button class="icon-btn" id="library-btn" aria-label="我的书架"><span class="ic-bookmark"></span></button>
+  </div>
+</header>
+
+<!-- 侧边抽屉 -->
+<div class="drawer-overlay" id="drawer-overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head">
+    <div class="drawer-emblem">✦</div>
+    <div>
+      <div class="drawer-title">德意志史诗</div>
+      <div class="drawer-sub">数字历史档案馆</div>
+    </div>
+  </div>
+  <nav class="drawer-nav">
+    <a href="#" data-nav="home"><span class="nav-ico">◈</span>首页</a>
+    <a href="#" data-nav="toc"><span class="nav-ico">☰</span>完整目录</a>
+    <a href="#" data-nav="topics"><span class="nav-ico">◉</span>专题研究</a>
+    <a href="#" data-nav="figures"><span class="nav-ico">♛</span>人物档案</a>
+    <a href="#" data-nav="charts"><span class="nav-ico">◇</span>历史图表</a>
+    <a href="#" data-nav="library"><span class="nav-ico">▤</span>我的书架</a>
+    <a href="#" data-nav="about"><span class="nav-ico">ⓘ</span>关于与书目</a>
+  </nav>
+  <div class="drawer-foot">
+    <div class="drawer-stat" id="drawer-stat">已收录 26 个时代 · 213 万字</div>
+  </div>
+</aside>
+
+<!-- 主内容区 -->
+<main id="app">
+
+  <!-- ============ 首页 ============ -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-inner">
+        <div class="hero-kicker">EINE GESCHICHTE DER DEUTSCHEN</div>
+        <h1 class="hero-title">德意志史诗</h1>
+        <div class="hero-de">DEUTSCHE GESCHICHTE</div>
+        <p class="hero-lead">从日耳曼森林到柏林墙，从神圣罗马帝国到统一后的欧洲。<br>一部以阅读为本的德国历史数字图书馆。</p>
+        <div class="hero-actions">
+          <button class="btn btn-gold" data-nav="toc">开始阅读 <span>→</span></button>
+          <button class="btn btn-ghost" data-nav="topics">深入专题</button>
+        </div>
+        <div class="hero-meta">
+          <span><b>26</b> 个历史时代</span><span class="dot">·</span>
+          <span><b>59</b> 卷本章节</span><span class="dot">·</span>
+          <span><b>213</b> 万字正文</span>
+        </div>
+      </div>
+      <div class="hero-scroll">向下滚动以探索历史长河 <span>↓</span></div>
+    </div>
+
+    <div class="home-body">
+      <!-- 阅读宗旨 -->
+      <div class="section-wrap">
+        <div class="manifesto">
+          <div class="mf-quote">„</div>
+          <p>这不是一部考试纲要，而是一部可以长久阅读的历史著作。<br>阅读为主，学习为辅——让叙事本身呈现历史的复杂与厚重。</p>
+          <div class="mf-line"></div>
+        </div>
+      </div>
+
+      <!-- 三本书 -->
+      <div class="section-wrap">
+        <div class="sec-head">
+          <div class="sec-num">I</div>
+          <div><h2>参考书目</h2><p>三部著作，构成这座图书馆的骨架与血肉</p></div>
+        </div>
+        <div class="books-row">
+          <div class="book-card">
+            <div class="book-spine b1"></div>
+            <div class="book-info">
+              <div class="book-tag">主框架 · 全六卷</div>
+              <h3>德国通史</h3>
+              <div class="book-en">六卷本 · 邢来顺 / 吴友法 主编</div>
+              <p>从远古至2010年的完整叙述。本站主体正文即整理自这部国家社科基金重大项目成果，覆盖政治、经济、社会、文化各领域。</p>
+              <div class="book-vol">江苏人民出版社 · 2019</div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-spine b2"></div>
+            <div class="book-info">
+              <div class="book-tag">现代化视角</div>
+              <h3>德意志道路</h3>
+              <div class="book-en">现代化进程研究 · 李工真</div>
+              <p>以比较视野考察德意志民族国家建设、普鲁士传统与工业化道路，辨析德国区别于英法的独特现代化路径。</p>
+              <div class="book-vol">专题分析中参酌其研究视角</div>
+            </div>
+          </div>
+          <div class="book-card">
+            <div class="book-spine b3"></div>
+            <div class="book-info">
+              <div class="book-tag">二十世纪转型</div>
+              <h3>德国史 1918—2014</h3>
+              <div class="book-en">A History of Germany 1918–2014 · Mary Fulbrook</div>
+              <p>聚焦魏玛、纳粹、战后分裂、两德与统一。本站20世纪部分的分析框架与时段划分与之呼应。</p>
+              <div class="book-vol">二十世纪专题 extends to 2014</div>
+            </div>
+          </div>
+        </div>
+        <p class="source-disclosure">※ 本站正文整理自《德国通史》六卷本（江苏人民出版社2019年版），按历史主题重新编排。另两部著作为扫描版本，未获取可检索全文，其学术视角用于专题分析的参考，文中不标注原书引文与页码。</p>
+      </div>
+
+      <!-- 时代预览 -->
+      <div class="section-wrap">
+        <div class="sec-head">
+          <div class="sec-num">II</div>
+          <div><h2>二十六个时代</h2><p>一部贯通两千年的德意志历史长卷</p></div>
+          <button class="sec-more" data-nav="toc">全部目录 →</button>
+        </div>
+        <div class="era-strip" id="home-eras"></div>
+      </div>
+
+      <!-- 专题入口 -->
+      <div class="section-wrap">
+        <div class="sec-head">
+          <div class="sec-num">III</div>
+          <div><h2>核心专题</h2><p>十一个贯穿德国历史根本问题的深度研究</p></div>
+          <button class="sec-more" data-nav="topics">查看全部 →</button>
+        </div>
+        <div class="topic-teasers" id="home-topics"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 目录页 ============ -->
+  <section class="view" id="view-toc">
+    <div class="page-head">
+      <div class="page-kicker">INHALTSVERZEICHNIS</div>
+      <h1>完整目录</h1>
+      <p>二十六个历史时代，按编年排列。点击任意时代展开其章节，进入连续叙述。</p>
+      <div class="page-tools">
+        <button class="filter-chip active" data-era="all">全部</button>
+        <button class="filter-chip" data-era="古代">古代</button>
+        <button class="filter-chip" data-era="中世纪">中世纪</button>
+        <button class="filter-chip" data-era="中世纪盛期">中世纪盛期</button>
+        <button class="filter-chip" data-era="近代早期">近代早期</button>
+        <button class="filter-chip" data-era="近代">近代</button>
+        <button class="filter-chip" data-era="现代">现代</button>
+        <button class="filter-chip" data-era="当代">当代</button>
+      </div>
+    </div>
+    <div class="toc-list" id="toc-list"></div>
+  </section>
+
+  <!-- ============ 阅读器 ============ -->
+  <section class="view" id="view-reader">
+    <div class="reader-toolbar">
+      <button class="icon-btn" id="reader-back">←</button>
+      <div class="reader-crumb" id="reader-crumb">首页 / 目录</div>
+      <div class="reader-tools">
+        <button class="icon-btn" id="font-minus" title="缩小字号">A−</button>
+        <button class="icon-btn" id="font-plus" title="放大字号">A+</button>
+        <button class="icon-btn" id="theme-toggle" title="切换阅读背景">◐</button>
+        <button class="icon-btn" id="reader-bookmark" title="加入书签">☆</button>
+      </div>
+    </div>
+    <div class="reader-progress-line"><div id="reader-progress-fill"></div></div>
+    <article class="reader-article" id="reader-article"></article>
+    <div class="reader-bottom" id="reader-bottom"></div>
+  </section>
+
+  <!-- ============ 专题研究 ============ -->
+  <section class="view" id="view-topics">
+    <div class="page-head">
+      <div class="page-kicker">TIEFENSTUDIEN</div>
+      <h1>专题研究</h1>
+      <p>十一个贯穿德国历史的问题。每个专题含独立分析与通向原始章节的阅读路径。</p>
+    </div>
+    <div class="topic-list" id="topic-list"></div>
+  </section>
+
+  <!-- 专题详情（复用阅读器样式） -->
+  <section class="view" id="view-topic-detail">
+    <div class="reader-toolbar">
+      <button class="icon-btn" id="topic-back">←</button>
+      <div class="reader-crumb" id="topic-crumb">专题研究</div>
+      <div class="reader-tools"><button class="icon-btn" id="topic-bookmark" title="加入书签">☆</button></div>
+    </div>
+    <article class="reader-article topic-article" id="topic-article"></article>
+    <div class="reader-bottom" id="topic-bottom"></div>
+  </section>
+
+  <!-- ============ 人物档案 ============ -->
+  <section class="view" id="view-figures">
+    <div class="page-head">
+      <div class="page-kicker">BIOGRAPHIEN</div>
+      <h1>人物档案</h1>
+      <p>塑造德意志历史的关键人物。人物之间可相互关联，并链接到相关历史章节。</p>
+      <div class="page-tools">
+        <button class="filter-chip active" data-fcat="all">全部</button>
+        <button class="filter-chip" data-fcat="君主">君主</button>
+        <button class="filter-chip" data-fcat="政治家">政治家</button>
+        <button class="filter-chip" data-fcat="思想宗教">思想与宗教</button>
+        <button class="filter-chip" data-fcat="军事">军事</button>
+        <button class="filter-chip" data-fcat="文化艺术">文化</button>
+      </div>
+    </div>
+    <div class="figure-grid" id="figure-grid"></div>
+  </section>
+
+  <!-- 人物详情 -->
+  <section class="view" id="view-figure-detail">
+    <div class="reader-toolbar">
+      <button class="icon-btn" id="figure-back">←</button>
+      <div class="reader-crumb">人物档案</div>
+    </div>
+    <div class="figure-detail" id="figure-detail"></div>
+  </section>
+
+  <!-- ============ 历史图表 ============ -->
+  <section class="view" id="view-charts">
+    <div class="page-head">
+      <div class="page-kicker">ATLAS &amp; DIAGRAMME</div>
+      <h1>历史图表</h1>
+      <p>世系、政体、时间轴与地图——以图形理解德国历史的结构与变迁。</p>
+    </div>
+    <div class="chart-tabs" id="chart-tabs">
+      <button class="ctab active" data-chart="dynasty">王朝世系</button>
+      <button class="ctab" data-chart="hrr">帝国政体</button>
+      <button class="ctab" data-chart="rivalry">普奥竞争</button>
+      <button class="ctab" data-chart="maps">历史地图</button>
+    </div>
+    <div class="chart-panel" id="chart-panel"></div>
+  </section>
+
+  <!-- ============ 搜索 ============ -->
+  <section class="view" id="view-search">
+    <div class="page-head">
+      <div class="page-kicker">VOLLTEXTSUCHE</div>
+      <h1>全文搜索</h1>
+      <p>在全部213万字正文中检索人物、事件与概念。</p>
+    </div>
+    <div class="search-box-wrap">
+      <input type="search" id="search-input" placeholder="输入关键词，如：俾斯麦、宗教改革、魏玛……" autocomplete="off">
+      <div class="search-status" id="search-status"></div>
+    </div>
+    <div class="search-results" id="search-results"></div>
+  </section>
+
+  <!-- ============ 我的书架 ============ -->
+  <section class="view" id="view-library">
+    <div class="page-head">
+      <div class="page-kicker">MEINE BIBLIOTHEK</div>
+      <h1>我的书架</h1>
+      <p>阅读进度、书签与笔记保存在本机浏览器中，随时续读。</p>
+      <div class="library-summary" id="library-summary"></div>
+    </div>
+    <div class="library-tabs">
+      <button class="libtab active" data-lib="progress">阅读进度</button>
+      <button class="libtab" data-lib="bookmarks">书签</button>
+      <button class="libtab" data-lib="notes">笔记</button>
+    </div>
+    <div class="library-body" id="library-body"></div>
+    <div class="library-danger">
+      <button id="clear-all-data">清除所有本地阅读数据</button>
+    </div>
+  </section>
+
+  <!-- ============ 关于 ============ -->
+  <section class="view" id="view-about">
+    <div class="page-head">
+      <div class="page-kicker">ÜBER DIESES PROJEKT</div>
+      <h1>关于与书目</h1>
+    </div>
+    <div class="about-body" id="about-body"></div>
+  </section>
+
+</main>
+
+<!-- 底部导航（移动端） -->
+<nav class="bottomnav" id="bottomnav">
+  <a href="#" data-nav="home"><span>◈</span><small>首页</small></a>
+  <a href="#" data-nav="toc"><span>☰</span><small>目录</small></a>
+  <a href="#" data-nav="search"><span>⌕</span><small>搜索</small></a>
+  <a href="#" data-nav="topics"><span>◉</span><small>专题</small></a>
+  <a href="#" data-nav="library"><span>▤</span><small>书架</small></a>
+</nav>
+
+<!-- 笔记弹层 -->
+<div class="modal" id="note-modal">
+  <div class="modal-card">
+    <div class="modal-head"><h3>阅读笔记</h3><button id="note-close">✕</button></div>
+    <div class="modal-context" id="note-context"></div>
+    <textarea id="note-text" placeholder="写下你的思考……"></textarea>
+    <div class="modal-actions">
+      <button class="btn-danger" id="note-delete">删除</button>
+      <button class="btn-gold" id="note-save">保存笔记</button>
+    </div>
+  </div>
+</div>
+
+<!-- 搜索脚本：先加载索引，模块数据按需动态注入 -->
+<script src="data/index.js"></script>
+<script src="js/topics.js"></script>
+<script src="js/topics2.js"></script>
+<script src="js/topics-depth.js"></script>
+<script src="js/topics-depth2.js"></script>
+<script src="js/topics-depth3.js"></script>
+<script src="js/figures.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
